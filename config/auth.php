@@ -45,7 +45,7 @@ return [
             'provider' => 'admins',
         ],
         'api' => [
-            'driver' => 'jwt',
+            'driver' => env('API_TYPE', 'jwt') ? 'jwt' : 'sanctum',
             'provider' => 'users',
         ],
     ],
